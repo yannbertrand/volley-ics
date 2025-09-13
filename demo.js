@@ -2,19 +2,17 @@ import getSaison from './ffvbbeach.org/client.js'
 import ics, { startServer } from './ics.js'
 import 'dotenv/config'
 
-const ca1 = await getSaison('2021/2022', 'PTPL44', 'CA1')
-const la1 = await getSaison('2021/2022', 'PTPL44', 'LA1')
+const ce1 = await getSaison('2025/2026', 'PTPL44', 'CE1')
+const la1 = await getSaison('2025/2026', 'PTPL44', 'LA1')
 
-const ASPTT1 = 'ASPTT 1'
-const asptt1 = [...ca1, ...la1].filter((match) =>
-  [match.equipeA.nom, match.equipeB.nom].includes(ASPTT1)
+const USFEN = 'USFEN'
+const usfenMatches = [...ce1, ...la1].filter((match) =>
+  [match.equipeA.nom, match.equipeB.nom].includes(USFEN)
 )
 
-const lastMatch = asptt1.at(-1)
+const firstMatch = usfenMatches.at(0)
 
-console.log(lastMatch)
-
-const ical = ics([lastMatch])
+const ical = ics([firstMatch])
 console.log(ical.toString())
 
 startServer(ical)

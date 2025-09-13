@@ -4,19 +4,19 @@ import ics from './ics.js'
 import 'dotenv/config'
 import { existsSync } from 'fs'
 
-const ca1 = await getSaison('2021/2022', 'PTPL44', 'CA1')
-const la1 = await getSaison('2021/2022', 'PTPL44', 'LA1')
+const ce1 = await getSaison('2025/2026', 'PTPL44', 'CE1')
+const la1 = await getSaison('2025/2026', 'PTPL44', 'LA1')
 
-const ASPTT1 = 'ASPTT 1'
-const asptt1 = [...ca1, ...la1].filter((match) =>
-  [match.equipeA.nom, match.equipeB.nom].includes(ASPTT1)
+const club = 'USFEN'
+const clubMatches = [...ce1, ...la1].filter((match) =>
+  [match.equipeA.nom, match.equipeB.nom].includes(club)
 )
 
-console.log(`${asptt1.length} matches found`)
+console.log(`${clubMatches.length} matches found`)
 
-const ical = ics(asptt1).toString()
+const ical = ics(clubMatches).toString()
 
 if (!existsSync('dist')) {
   await mkdir('dist')
 }
-await writeFile('dist/44-asptt1.ics', ical)
+await writeFile(`dist/44-${club}.ics`, ical)

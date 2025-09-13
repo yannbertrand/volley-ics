@@ -9,7 +9,7 @@ import { add3Hours, getInstant } from './date.utils.js'
  */
 export default function (matches) {
   const calendar = ical({
-    name: 'ASPTT 1',
+    name: 'USFEN',
     method: 'PUBLISH',
     timezone: 'Europe/Paris',
   })
