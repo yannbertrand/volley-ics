@@ -126,6 +126,18 @@ function getSalleAdress(salle) {
         'Gymnase Liberge, 11 Rue de la Galarnière, 44400 Rezé',
       'SALLE DE LA PAPINIERE':
         'Salle de la Papinière, 18 Rue de la Papinière, 44240 Sucé-sur-Erdre',
+      'LA CHOLIERE':
+        'Gymnase de la Cholière, 108 Av. Claude Antoine Peccot, 44700 Orvault',
+      'GYMNASE VICTOR HUGO':
+        'Gymnase Victor Hugo, 29 Rue Paul Bellamy, 44000 Nantes',
+      'COMPLEXE DES CORNOUAILLES':
+        'Complexe sportif des Cornouailles, 378 Rue Cornouaille, 44522 Mésanger',
+      'COMPLEXE CENT SILLONS':
+        'Complexe des Cent Sillons, 14 Rue des Cent Sillons, 44119 Grandchamps-des-Fontaines',
+      'SALLE JULES LADOUMEGUE':
+        'Salle de sport Jules Ladoumègue, 21 Rue du Drouillard, 44620 La Montagne',
+      'SALLE DE LA MARTELIERE':
+        'Gymnase La Martellière, Av. de la Martellière, 44230 Saint-Sébastien-sur-Loire',
     }[salle] || salle
   )
 }
