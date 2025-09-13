@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it } from 'vitest'
 import getMockedFfvbbClient from '../mock.js'
 import { getMatch } from './get-match.js'
 
-describe.only('getSaisonMatches', () => {
+describe('getMatch', () => {
   let matchAsptt1vsAsbr1
   beforeEach(async () => {
     client = await getMockedFfvbbClient()

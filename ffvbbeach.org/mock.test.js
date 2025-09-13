@@ -12,7 +12,7 @@ describe('ffvbbeach.org', () => {
       expect(ffvbbFixtures).toHaveProperty('LA1A021')
       expect(ffvbbFixtures.CA1).toMatchSnapshot()
       expect(ffvbbFixtures.LA1).toMatchSnapshot()
-      expect(ffvbbFixtures.LA1A021).toMatchSnapshot()
+      expect(ffvbbFixtures.LA1A021.toString()).toMatchSnapshot()
     })
 
     describe('mockedFfvbbClient', () => {
@@ -53,7 +53,7 @@ describe('ffvbbeach.org', () => {
         })
 
         const { LA1A021 } = await getFfvbbFixtures()
-        expect(await csvResponse.body.text()).toEqual(LA1A021)
+        expect(await csvResponse.body.text()).toEqual(LA1A021.toString())
       })
     })
   })

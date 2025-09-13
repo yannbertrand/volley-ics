@@ -33,7 +33,7 @@ async function loadLA1Fixtures() {
 
 async function loadLA1A021Fixtures() {
   const LA1A021Path = resolve(__dirname, 'fixtures', 'doc.pdf')
-  return (await readFile(LA1A021Path)).toString()
+  return await readFile(LA1A021Path)
 }
 
 export default async function getMockedFfvbbClient() {
