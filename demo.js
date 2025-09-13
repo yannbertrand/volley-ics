@@ -1,5 +1,5 @@
-import getSaison from './ffvbbeach.org/client.mjs'
-import ics, { startServer } from './ics.mjs'
+import getSaison from './ffvbbeach.org/client.js'
+import ics, { startServer } from './ics.js'
 import 'dotenv/config'
 
 const ca1 = await getSaison('2021/2022', 'PTPL44', 'CA1')

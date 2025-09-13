@@ -1,6 +1,6 @@
-import getSaison from './ffvbbeach.org/client.mjs'
-import ics from './ics.mjs'
-import { writeFile, mkdir } from 'fs/promises'
+import { mkdir, writeFile } from 'fs/promises'
+import getSaison from './ffvbbeach.org/client.js'
+import ics from './ics.js'
 import 'dotenv/config'
 import { existsSync } from 'fs'
 

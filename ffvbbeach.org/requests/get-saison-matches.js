@@ -1,5 +1,5 @@
 import Papa from 'papaparse'
-import getRequestBody from '../body.builder.mjs'
+import getRequestBody from '../body.builder.js'
 
 export async function getSaisonMatches(client, saison, ent, poule) {
   let response

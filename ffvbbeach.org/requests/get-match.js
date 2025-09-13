@@ -1,5 +1,5 @@
 import PDFParser from 'pdf2json'
-import getRequestBody from '../body.builder.mjs'
+import getRequestBody from '../body.builder.js'
 
 export async function getMatch(client, saison, ent, matchId) {
   let bufferResult
@@ -22,9 +22,11 @@ export async function getMatch(client, saison, ent, matchId) {
         reject(error)
       })
       body.on('data', (chunk) => {
+        console.log(chunk)
         buff = Buffer.concat([buff, chunk])
       })
       body.on('end', () => {
+        console.log('end')
         resolve(buff)
       })
     })
@@ -46,7 +48,7 @@ export async function getMatch(client, saison, ent, matchId) {
       }
 
       tmpPages.push(
-        page.Texts.map((t) => t.R.map((R) => decodeURIComponent(R.T))).flat()
+        page.Texts.flatMap((t) => t.R.map((R) => decodeURIComponent(R.T)))
       )
       console.log(page)
     })

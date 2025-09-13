@@ -1,6 +1,6 @@
 import ical from 'ical-generator'
 import http from 'http'
-import { add3Hours, getInstant } from './date.utils.mjs'
+import { add3Hours, getInstant } from './date.utils.js'
 
 /**
  *

@@ -1,8 +1,8 @@
-import { describe, beforeEach, it, expect } from 'vitest'
-import getMockedFfvbbClient from '../mock.mjs'
-import { getMatch } from './get-match.mjs'
+import { beforeEach, describe, expect, it } from 'vitest'
+import getMockedFfvbbClient from '../mock.js'
+import { getMatch } from './get-match.js'
 
-describe('getSaisonMatches', () => {
+describe.only('getSaisonMatches', () => {
   let matchAsptt1vsAsbr1
   beforeEach(async () => {
     client = await getMockedFfvbbClient()

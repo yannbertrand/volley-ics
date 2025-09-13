@@ -1,10 +1,11 @@
 {
+  "type": "module",
   "scripts": {
-    "demo": "node demo.mjs",
-    "build": "node build.mjs",
+    "demo": "node demo.js",
+    "build": "node build.js",
     "start": "npm run demo",
     "test": "USE_NETWORK=false vitest",
-    "readpdf": "node ffvbbeach.org/fixtures/read-pdf.mjs"
+    "readpdf": "node ffvbbeach.org/fixtures/read-pdf.js"
   },
   "dependencies": {
     "dotenv": "16.0.0",

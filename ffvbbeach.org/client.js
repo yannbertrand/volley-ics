@@ -1,7 +1,7 @@
-import getMockedFfvbbClient from './mock.mjs'
 import { Client } from 'undici'
+import getMockedFfvbbClient from './mock.js'
 import 'dotenv/config'
-import { getSaisonMatches } from './requests/get-saison-matches.mjs'
+import { getSaisonMatches } from './requests/get-saison-matches.js'
 
 if (process.env.USE_NETWORK !== 'true') {
   console.log('Will not use network for ffvbbeach.org requests')

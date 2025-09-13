@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import getRequestBody from './body.builder.mjs'
+import getRequestBody from './body.builder.js'
 
 describe('form.builder', () => {
   it('should return a string form', () => {
