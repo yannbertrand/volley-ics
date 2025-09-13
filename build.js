@@ -4,8 +4,11 @@ import ics from './ics.js'
 import 'dotenv/config'
 import { existsSync } from 'fs'
 
-const ce1 = await getSaison('2025/2026', 'PTPL44', 'CE1')
-const la1 = await getSaison('2025/2026', 'PTPL44', 'LA1')
+const saison = '2025/2026'
+const codent = 'PTPL44'
+
+const ce1 = await getSaison(saison, codent, 'CE1')
+const la1 = await getSaison(saison, codent, 'LA1')
 
 const club = 'USFEN'
 const clubMatches = [...ce1, ...la1].filter((match) =>
