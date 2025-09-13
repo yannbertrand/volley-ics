@@ -6,12 +6,13 @@ import { existsSync } from 'fs'
 
 const saison = '2025/2026'
 const codent = 'PTPL44'
+const poule = 'E1'
 
-const ce1 = await getSaison(saison, codent, 'CE1')
-const la1 = await getSaison(saison, codent, 'LA1')
+const p1matches = await getSaison(saison, codent, `C${poule}`)
+const p2matches = await getSaison(saison, codent, `L${poule}`)
 
 const club = 'USFEN'
-const clubMatches = [...ce1, ...la1].filter((match) =>
+const clubMatches = [...p1matches, ...p2matches].filter((match) =>
   [match.equipeA.nom, match.equipeB.nom].includes(club)
 )
 
