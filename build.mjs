@@ -1,4 +1,4 @@
-import { getSaison } from './ffvbbeach.org'
+import getSaison from './ffvbbeach.org/client.mjs'
 import ics from './ics.mjs'
 import { writeFile, mkdir } from 'fs/promises'
 import 'dotenv/config'

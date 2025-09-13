@@ -1,4 +1,4 @@
-import { getSaison } from './ffvbbeach.org'
+import getSaison from './ffvbbeach.org/client.mjs'
 import ics, { startServer } from './ics.mjs'
 import 'dotenv/config'
 
