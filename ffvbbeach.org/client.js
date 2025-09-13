@@ -1,6 +1,5 @@
 import { Client } from 'undici'
 import getMockedFfvbbClient from './mock.js'
-import 'dotenv/config'
 import { getSaisonMatches } from './requests/get-saison-matches.js'
 
 if (process.env.USE_NETWORK !== 'true') {

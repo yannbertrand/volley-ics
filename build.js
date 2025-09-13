@@ -1,8 +1,7 @@
+import { existsSync } from 'fs'
 import { mkdir, writeFile } from 'fs/promises'
 import getSaison from './ffvbbeach.org/client.js'
 import ics from './ics.js'
-import 'dotenv/config'
-import { existsSync } from 'fs'
 
 const saison = '2025/2026'
 const codent = 'PTPL44'
