@@ -22,11 +22,9 @@ export async function getMatch(client, saison, ent, matchId) {
         reject(error)
       })
       body.on('data', (chunk) => {
-        console.log(chunk)
         buff = Buffer.concat([buff, chunk])
       })
       body.on('end', () => {
-        console.log('end')
         resolve(buff)
       })
     })
