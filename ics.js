@@ -1,5 +1,5 @@
-import ical from 'ical-generator'
 import http from 'http'
+import ical from 'ical-generator'
 import { add3Hours, getInstant } from './date.utils.js'
 
 /**
@@ -9,12 +9,12 @@ import { add3Hours, getInstant } from './date.utils.js'
  */
 export default function (matches) {
   const calendar = ical({
-    name: 'USFEN',
+    name: 'FFVB44',
     method: 'PUBLISH',
     timezone: 'Europe/Paris',
   })
 
-  for (let match of matches) {
+  for (const match of matches) {
     const start = getInstant(match.date, match.heure)
     const end = add3Hours(start)
 
@@ -23,7 +23,7 @@ export default function (matches) {
       end,
       summary: `${match.equipeA.nom} vs. ${match.equipeB.nom}`,
       location: match.salle,
-      organiser: { name: 'ASPTT1', email: 'aspt11@ffvbbeach.org' },
+      organiser: { name: 'volley-ics', email: 'comite44volley@protonmail.com' },
       status: 'CONFIRMED',
       timezone: 'Europe/Paris',
     })
