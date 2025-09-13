@@ -22,4 +22,4 @@ const ical = ics(clubMatches).toString()
 if (!existsSync('dist')) {
   await mkdir('dist')
 }
-await writeFile(`dist/44-${club}.ics`, ical)
+await writeFile(`dist/${club}-${codent}-${saison.replace('/', '-')}.ics`, ical)
