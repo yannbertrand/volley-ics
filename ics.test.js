@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import ics from './ics.mjs'
+import ics from './ics.js'
 
 describe('ics', () => {
   let matches, firstMatch, response

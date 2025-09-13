@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import getRequestBody from './body.builder.mjs'
-import getMockedFfvbbClient from './mock.mjs'
-import { getFfvbbFixtures } from './mock.mjs'
+import getRequestBody from './body.builder.js'
+import getMockedFfvbbClient, { getFfvbbFixtures } from './mock.js'
 
 describe('ffvbbeach.org', () => {
   describe('mock', () => {

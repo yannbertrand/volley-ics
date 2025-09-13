@@ -1,6 +1,6 @@
 import { describe, beforeEach, it, expect } from 'vitest'
-import getMockedFfvbbClient from '../mock.mjs'
-import { getSaisonMatches } from './get-saison-matches.mjs'
+import getMockedFfvbbClient from '../mock.js'
+import { getSaisonMatches } from './get-saison-matches.js'
 
 describe('getSaisonMatches', () => {
   let ca1
