@@ -17,7 +17,7 @@
     "undici": "4.13.0"
   },
   "devDependencies": {
-    "pdf2json": "2.0.0",
+    "pdf2json": "2.0.2",
     "prettier": "2.5.1",
     "vitest": "0.3.2"
   }
