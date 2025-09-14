@@ -19,6 +19,6 @@
   "devDependencies": {
     "pdf2json": "2.0.2",
     "prettier": "2.5.1",
-    "vitest": "0.3.2"
+    "vitest": "3.2.4"
   }
 }
