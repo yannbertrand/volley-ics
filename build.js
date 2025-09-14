@@ -95,6 +95,6 @@ console.log(`Build done - ${codent} ${saison}`)
 function getFileName(club, codent, saison) {
   return `${club.replaceAll(' ', '-')}-${codent}-${saison.replace(
     '/',
-    '-'
+    '-',
   )}.ics`
 }
