@@ -2,7 +2,7 @@ import { readFile } from 'fs/promises'
 import { dirname, resolve } from 'path'
 import { MockAgent } from 'undici'
 import { fileURLToPath } from 'url'
-import getRequestBody from './body.builder.js'
+import getRequestBody from './requests/body.builder.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 

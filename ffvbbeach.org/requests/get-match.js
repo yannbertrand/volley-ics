@@ -1,5 +1,5 @@
 import PDFParser from 'pdf2json'
-import getRequestBody from '../body.builder.js'
+import getRequestBody from './body.builder.js'
 
 export async function getMatch(client, saison, ent, matchId) {
   let bufferResult
