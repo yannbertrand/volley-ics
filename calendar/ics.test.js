@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
+import { getInstant } from './date.utils.js'
 import ics from './ics.js'
 
 describe('ics', () => {
@@ -62,4 +63,31 @@ describe('ics', () => {
 
     expect(response).toContain(firstMatch.salle)
   })
+
+  it('should fill the match start datetime', () => {
+    const datetime = getIcsDateTime(firstMatch.date, firstMatch.heure)
+
+    const response = ics(matches).toString()
+
+    expect(response).toContain(`DTSTART;TZID=Europe/Paris:${datetime}`)
+  })
+
+  it('should fill the match end datetime', () => {
+    const datetime = getIcsDateTime(firstMatch.date, firstMatch.heure, 3)
+
+    const response = ics(matches).toString()
+
+    expect(response).toContain(`DTEND;TZID=Europe/Paris:${datetime}`)
+  })
 })
+
+function getIcsDateTime(date, heure, addHours = 0) {
+  const instant = getInstant(date, heure)
+  const year = instant.getFullYear()
+  const month = `${instant.getMonth() + 1}`.padStart(2, '0')
+  const day = `${instant.getDate()}`.padStart(2, '0')
+  const hours = `${instant.getHours() + addHours}`.padStart(2, '0')
+  const minutes = `${instant.getMinutes()}`.padStart(2, '0')
+
+  return `${year}${month}${day}T${hours}${minutes}`
+}
