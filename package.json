@@ -5,7 +5,8 @@
     "build": "node --env-file-if-exists=.env build.js",
     "start": "npm run demo",
     "test": "USE_NETWORK=false vitest",
-    "readpdf": "node --env-file-if-exists=.env ffvbbeach.org/fixtures/read-pdf.js"
+    "readpdf": "node --env-file-if-exists=.env ffvbbeach.org/fixtures/read-pdf.js",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "form-data": "4.0.0",
