@@ -26,8 +26,7 @@ const poules = Object.keys(matches)
 
 let nbOfMatchesFound = 0
 for (const poule of poules) {
-  matches[poule].push(...(await getSaison(saison, codent, `C${poule}`)))
-  matches[poule].push(...(await getSaison(saison, codent, `L${poule}`)))
+  matches[poule].push(...(await getSaison(saison, codent, poule)))
   nbOfMatchesFound += matches[poule].length
   console.log(`${matches[poule].length} matches found in ${poule} poule`)
 }
