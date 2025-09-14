@@ -7,11 +7,15 @@ describe('ffvbbeach.org', () => {
     it('should give access to fixtures', async () => {
       const ffvbbFixtures = await getFfvbbFixtures()
 
-      expect(ffvbbFixtures).toHaveProperty('CA1')
-      expect(ffvbbFixtures).toHaveProperty('LA1')
+      expect(ffvbbFixtures).toHaveProperty('CA1_2021_2022')
+      expect(ffvbbFixtures).toHaveProperty('LA1_2021_2022')
+      expect(ffvbbFixtures).toHaveProperty('CE1_2025_2026')
+      expect(ffvbbFixtures).toHaveProperty('LE1_2025_2026')
       expect(ffvbbFixtures).toHaveProperty('LA1A021')
-      expect(ffvbbFixtures.CA1).toMatchSnapshot()
-      expect(ffvbbFixtures.LA1).toMatchSnapshot()
+      expect(ffvbbFixtures.CA1_2021_2022).toMatchSnapshot()
+      expect(ffvbbFixtures.LA1_2021_2022).toMatchSnapshot()
+      expect(ffvbbFixtures.CE1_2025_2026).toMatchSnapshot()
+      expect(ffvbbFixtures.LE1_2025_2026).toMatchSnapshot()
       expect(ffvbbFixtures.LA1A021.toString()).toMatchSnapshot()
     })
 
@@ -33,8 +37,8 @@ describe('ffvbbeach.org', () => {
           }),
         })
 
-        const { CA1 } = await getFfvbbFixtures()
-        expect(await csvResponse.body.text()).toEqual(CA1)
+        const { CA1_2021_2022 } = await getFfvbbFixtures()
+        expect(await csvResponse.body.text()).toEqual(CA1_2021_2022)
       })
 
       it('should return single match fixture data', async () => {
