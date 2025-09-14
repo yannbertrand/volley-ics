@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "form-data": "4.0.4",
-    "ical-generator": "3.2.1",
+    "ical-generator": "3.6.1",
     "ics": "2.35.0",
     "papaparse": "5.3.1",
     "pdfreader": "1.2.14",
