@@ -17,8 +17,8 @@ describe('ffvbbeach.org', () => {
 
     describe('mockedFfvbbClient', () => {
       it('should return matches list fixtures data', async () => {
-        mockedFfvbbClient = await getMockedFfvbbClient()
-        csvResponse = await mockedFfvbbClient.request({
+        const mockedFfvbbClient = await getMockedFfvbbClient()
+        const csvResponse = await mockedFfvbbClient.request({
           path: '/ffvbapp/resu/vbspo_calendrier_export.php',
           method: 'POST',
           headers: {
@@ -38,8 +38,8 @@ describe('ffvbbeach.org', () => {
       })
 
       it('should return single match fixture data', async () => {
-        mockedFfvbbClient = await getMockedFfvbbClient()
-        csvResponse = await mockedFfvbbClient.request({
+        const mockedFfvbbClient = await getMockedFfvbbClient()
+        const csvResponse = await mockedFfvbbClient.request({
           path: '/ffvbapp/adressier/fiche_match_ffvb.php',
           method: 'POST',
           headers: {
