@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it } from 'vitest'
 import ics from './ics.js'
 
 describe('ics', () => {
-  let matches, firstMatch, response
+  let matches, firstMatch
   beforeEach(() => {
     matches = [
       {
@@ -47,19 +47,19 @@ describe('ics', () => {
       },
     ]
     firstMatch = matches.at(0)
-    response = ics(matches, (date, hour) => {
-      return new Date(date + ' ' + hour)
-    }).toString()
   })
 
   it('should use "${equipeA.nom} vs. ${equipeB.nom}" as title', () => {
-    const equipeA = firstMatch.equipeA
-    const equipeB = firstMatch.equipeB
-    const expectedTitle = `${equipeA.nom} vs. ${equipeB.nom}`
+    const expectedTitle = `${firstMatch.equipeA.nom} vs. ${firstMatch.equipeB.nom}`
+
+    const response = ics(matches).toString()
+
     expect(response).toContain(expectedTitle)
   })
 
   it('should fill the match location', () => {
+    const response = ics(matches).toString()
+
     expect(response).toContain(firstMatch.salle)
   })
 })
