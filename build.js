@@ -1,7 +1,7 @@
 import { existsSync } from 'fs'
 import { mkdir, writeFile } from 'fs/promises'
+import ics from './calendar/ics.js'
 import getSaison from './ffvbbeach.org/client.js'
-import ics from './ics.js'
 
 const saison = '2025/2026'
 const codent = 'PTPL44'

@@ -1,5 +1,5 @@
+import ics, { startServer } from './calendar/ics.js'
 import getSaison from './ffvbbeach.org/client.js'
-import ics, { startServer } from './ics.js'
 
 const saison = '2025/2026'
 const codent = 'PTPL44'
