@@ -11,7 +11,7 @@ pdfParser.on('data', (page) => {
   console.log(page ? 'One page paged' : 'All pages parsed', page)
   if (page === null) return
   console.log(
-    page.Texts.map((t) => t.R.map((R) => decodeURIComponent(R.T))).flat()
+    page.Texts.flatMap((t) => t.R.map((R) => decodeURIComponent(R.T))),
   )
 })
 pdfParser.on('error', (err) => console.error('Parser Error', err))

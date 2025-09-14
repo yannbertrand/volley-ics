@@ -63,12 +63,12 @@ function handleFfvbbRequestError(exception) {
   switch (exception.errno) {
     case -3008:
       throw new Error(
-        'www.ffvbbeach.org was not found, are you connected to the internet?\nOr do you need to work with mocked data using `USE_NETWORK=false`?'
+        'www.ffvbbeach.org was not found, are you connected to the internet?\nOr do you need to work with mocked data using `USE_NETWORK=false`?',
       )
     default:
       console.error(exception)
       throw new Error(
-        'An unkown error occured while requesting www.ffvbbeach.org'
+        'An unkown error occured while requesting www.ffvbbeach.org',
       )
   }
 }

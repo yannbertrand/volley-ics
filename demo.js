@@ -9,7 +9,7 @@ const matches = await getSaison(saison, codent, poule)
 
 const club = 'USFEN'
 const clubMatches = matches.filter((match) =>
-  [match.equipeA.nom, match.equipeB.nom].includes(club)
+  [match.equipeA.nom, match.equipeB.nom].includes(club),
 )
 
 const firstMatch = clubMatches.at(0)

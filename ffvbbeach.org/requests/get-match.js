@@ -32,7 +32,7 @@ export async function getMatch(client, saison, ent, matchId) {
     // ToDo
     console.error(exception)
     throw new Error(
-      'An unkown error occured while requesting www.ffvbbeach.org'
+      'An unkown error occured while requesting www.ffvbbeach.org',
     )
   }
 
@@ -46,7 +46,7 @@ export async function getMatch(client, saison, ent, matchId) {
       }
 
       tmpPages.push(
-        page.Texts.flatMap((t) => t.R.map((R) => decodeURIComponent(R.T)))
+        page.Texts.flatMap((t) => t.R.map((R) => decodeURIComponent(R.T))),
       )
       console.log(page)
     })

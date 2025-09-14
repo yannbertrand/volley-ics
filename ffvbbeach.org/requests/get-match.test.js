@@ -9,7 +9,7 @@ describe('getMatch', () => {
       client,
       '2021/2022',
       'PTPL44',
-      'LA1A021'
+      'LA1A021',
     )
     expect(matchAsptt1vsAsbr1).toBeDefined()
     expect(matchAsptt1vsAsbr1).toMatchSnapshot()

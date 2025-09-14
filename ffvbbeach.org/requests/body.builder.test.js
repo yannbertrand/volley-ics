@@ -12,7 +12,7 @@ describe('form.builder', () => {
     })
 
     expect(result).toMatchInlineSnapshot(
-      '"typ_edition=E&type=RES&cal_saison=2021%2F2022&cal_codent=PTPL44&cal_codpoule=CA1"'
+      '"typ_edition=E&type=RES&cal_saison=2021%2F2022&cal_codent=PTPL44&cal_codpoule=CA1"',
     )
   })
 })
