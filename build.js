@@ -87,6 +87,8 @@ for (const poule of poules) {
   htmlFile += `</ul>`
 }
 
+htmlFile += `<a href="https://www.netlify.com"><img src="/netlify.svg" alt="Deploys by Netlify" width="114" height="51"></a>`
+
 await writeFile(`dist/index.html`, htmlFile)
 console.log(`Wrote "index.html"`)
 
