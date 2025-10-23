@@ -16,7 +16,7 @@
     "undici": "7.16.0"
   },
   "devDependencies": {
-    "netlify-cli": "23.9.2",
+    "netlify-cli": "23.9.3",
     "pdf2json": "3.2.2",
     "prettier": "3.6.2",
     "vitest": "3.2.4"
