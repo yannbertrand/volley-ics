@@ -19,6 +19,6 @@
     "netlify-cli": "23.10.0",
     "pdf2json": "4.0.0",
     "prettier": "3.6.2",
-    "vitest": "4.0.7"
+    "vitest": "4.0.8"
   }
 }
