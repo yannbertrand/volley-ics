@@ -2,6 +2,7 @@ node_modules
 .env
 dist/*
 !dist/netlify.svg
+.DS_Store
 
 # Local Netlify folder
 .netlify
