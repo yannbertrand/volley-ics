@@ -12,6 +12,6 @@ htmlFile += `<a href="https://www.netlify.com"><img src="/netlify.svg" alt="Depl
 await writeFile(`dist/index.html`, htmlFile)
 console.log(`Wrote "index.html"`)
 
-buildSaison(saison)
+await buildSaison(saison)
 
 console.log(`Build done - ${saison}`)
