@@ -1,5 +1,5 @@
 import { writeFile } from 'fs/promises'
-import { buildSaison } from './build-PTPL44.js'
+import { buildSaison } from './build-compet.js'
 
 const saison = '2025/2026'
 
