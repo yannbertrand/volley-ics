@@ -8,10 +8,12 @@ if (process.env.USE_NETWORK !== 'true') {
 
 export default async function getSaison(saison, ent, poule) {
   const client = await getFfvbbClient()
-  const saisonMatches = await Promise.all([
-    ...(await getSaisonMatches(client, saison, ent, `C${poule}`)),
-    ...(await getSaisonMatches(client, saison, ent, `L${poule}`)),
-  ])
+  const saisonMatches = (
+    await Promise.all([
+      //   getSaisonMatches(client, saison, ent, `C${poule}`),
+      getSaisonMatches(client, saison, ent, `L${poule}`),
+    ])
+  ).flat()
   return saisonMatches
 }
 
