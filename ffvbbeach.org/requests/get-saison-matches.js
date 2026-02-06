@@ -138,7 +138,8 @@ function getSalleAdress(salle) {
         'Salle de sport Jules Ladoumègue, 21 Rue du Drouillard, 44620 La Montagne',
       'SALLE DE LA MARTELIERE':
         'Gymnase La Martellière, Av. de la Martellière, 44230 Saint-Sébastien-sur-Loire',
-      'COMPLEXE SEVRE ET MAINE': 'Rue Sèvre et Maine, 44120 Vertou',
+      'COMPLEXE SEVRE ET MAINE':
+        'Badminton Vertou, Rue Sèvre et Maine, 44120 Vertou',
       'SALLE DES ARDILLAUX': 'Salle de sport des Ardillaux, 44390 Casson',
       'HALLE DES SPORTS DE LA MINAIS':
         '40 Rue Olympe de Gouges, 44980 Sainte-Luce-sur-Loire',
