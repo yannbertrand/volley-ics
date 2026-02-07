@@ -12,7 +12,7 @@
   "dependencies": {
     "ical-generator": "10.0.0",
     "papaparse": "5.5.3",
-    "undici": "7.20.0"
+    "undici": "7.21.0"
   },
   "devDependencies": {
     "netlify-cli": "23.15.1",
