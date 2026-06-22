@@ -10,7 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "ical-generator": "10.2.0",
+    "ical-generator": "11.0.0",
     "papaparse": "5.5.4",
     "undici": "7.26.0"
   },
