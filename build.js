@@ -1,7 +1,7 @@
 import { writeFile } from 'fs/promises'
 import { buildSaison } from './build-compet.js'
 
-const saison = '2025/2026'
+const saison = '2026/2027'
 
 console.log(`Build started - ${saison}`)
 
