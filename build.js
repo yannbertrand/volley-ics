@@ -6,7 +6,7 @@ const saison = '2026/2027'
 console.log(`Build started - ${saison}`)
 
 let htmlFile = `<h1>Agenda volley ${saison}</h1>`
-htmlFile += `<a href="./PTPL44-2025-2026.html">Championnats départementaux 44 Loire Atlantique</a>`
+htmlFile += `<a href="./PTPL44-2026-2027.html">Championnats départementaux 44 Loire Atlantique</a>`
 htmlFile += `<a href="https://www.netlify.com"><img src="/netlify.svg" alt="Deploys by Netlify" width="114" height="51"></a>`
 
 await writeFile(`dist/index.html`, htmlFile)
