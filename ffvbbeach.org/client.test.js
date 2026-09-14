@@ -6,7 +6,7 @@ describe('mockedFfvbbClient', () => {
     it('should return matches list', async () => {
       const saison = '2025/2026'
       const codent = 'PTPL44'
-      const poule = 'E1'
+      const poule = 'CE1'
       const matches = await getSaison(saison, codent, poule)
 
       expect(matches).toHaveLength(45)

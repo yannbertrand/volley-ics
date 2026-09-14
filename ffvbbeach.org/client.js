@@ -6,14 +6,9 @@ if (process.env.USE_NETWORK !== 'true') {
   console.log('Will not use network for ffvbbeach.org requests')
 }
 
-export default async function getSaison(saison, ent, poule) {
+export default async function getSaison(saison, ent, poule = null) {
   const client = await getFfvbbClient()
-  const saisonMatches = (
-    await Promise.all([
-      getSaisonMatches(client, saison, ent, `C${poule}`),
-      getSaisonMatches(client, saison, ent, `L${poule}`),
-    ])
-  ).flat()
+  const saisonMatches = await getSaisonMatches(client, saison, ent, poule)
   return saisonMatches
 }
 

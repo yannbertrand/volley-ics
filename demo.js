@@ -3,7 +3,7 @@ import getSaison from './ffvbbeach.org/client.js'
 
 const saison = '2025/2026'
 const codent = 'PTPL44'
-const poule = 'E1'
+const poule = 'CE1'
 
 const matches = await getSaison(saison, codent, poule)
 

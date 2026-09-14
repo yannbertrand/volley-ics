@@ -139,5 +139,18 @@ export default async function getMockedFfvbbClient() {
     })
     .reply(200, LA1A021)
 
+  mockedFfvbbClient
+    .intercept({
+      method: 'POST',
+      path: '/ffvbapp/resu/vbspo_calendrier_export.php',
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      body: getRequestBody({
+        typ_edition: 'E',
+        type: 'RES',
+        cal_codent: 'PTPL44',
+      }),
+    })
+    .reply(200, CA1_2021_2022)
+
   return mockedFfvbbClient
 }
