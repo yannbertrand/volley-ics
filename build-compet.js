@@ -3,7 +3,7 @@ import { mkdir, writeFile } from 'fs/promises'
 import ics from './calendar/ics.js'
 import getSaison from './ffvbbeach.org/client.js'
 
-export async function buildSaison(saison, codent = 'PTPL44') {
+export async function buildSaison(saison, codent) {
   console.log(`Build started - ${codent} ${saison}`)
 
   const matches = await getSaison(saison, codent)
@@ -59,7 +59,7 @@ export async function buildSaison(saison, codent = 'PTPL44') {
 }
 
 function getFileName(club, codent, saison) {
-  return `${club.replaceAll(' ', '-')}-${codent}-${saison.replace(
+  return `${club.replaceAll(/[ /]/g, '-')}-${codent}-${saison.replace(
     '/',
     '-',
   )}.ics`
