@@ -147,6 +147,14 @@ function getSalleAdress(salle) {
       'SALLE DES ARDILLAUX': 'Salle de sport des Ardillaux, 44390 Casson',
       'HALLE DES SPORTS DE LA MINAIS':
         '40 Rue Olympe de Gouges, 44980 Sainte-Luce-sur-Loire',
+      'GYMNASE DES MARSAUDERIES':
+        'Gymnase des Marsauderies, Rue de Koufra, 44300 Nantes',
+      'GYMNASE GRAND CARCOUET':
+        'Gymnase Grand Carcouet, 1 Rue Louis Brisset, 44100 Nantes',
+      'COMPLEXE ALICE MILLIAT':
+        'Gymnase Alice-Milliat, La Justice, 44260 Savenay',
+      'SALLE EUGENE DURAND':
+        'Salle Eugene Durand, Allée Jules Verne, 44850 Ligné',
     }[salle] || salle
   )
 }
