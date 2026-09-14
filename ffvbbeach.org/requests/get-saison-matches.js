@@ -56,7 +56,7 @@ export async function getSaisonMatches(client, saison, ent, poule) {
   mapMatch.set('salle', 'Salle')
   mapMatch.set('arbitres', mapArbitres)
 
-  return mapData(rawContent, mapMatch)
+  return mapData(filterData(rawContent), mapMatch)
 }
 
 function handleFfvbbRequestError(exception) {
@@ -71,6 +71,10 @@ function handleFfvbbRequestError(exception) {
         'An unkown error occured while requesting www.ffvbbeach.org',
       )
   }
+}
+
+function filterData(data) {
+  return data.filter((item) => item.EQA_no !== '' && item.EQB_no !== '')
 }
 
 function mapData(data, mapValues) {

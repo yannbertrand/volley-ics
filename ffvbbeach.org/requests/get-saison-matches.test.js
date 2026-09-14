@@ -11,4 +11,13 @@ describe('getSaisonMatches', () => {
     expect(matches).toHaveLength(45)
     expect(matches).toMatchSnapshot()
   })
+
+  it('should filter out xxxxx team', async () => {
+    const client = await getMockedFfvbbClient()
+    const matches = await getSaisonMatches(client, '2026/2027', 'PTPL44', 'CE2')
+
+    expect(matches).toBeDefined()
+    expect(matches).toHaveLength(45 - 9)
+    expect(matches).toMatchSnapshot()
+  })
 })

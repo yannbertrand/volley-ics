@@ -6,7 +6,12 @@ import getRequestBody from './requests/body.builder.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-let CA1_2021_2022, LA1_2021_2022, CE1_2025_2026, LE1_2025_2026, LA1A021
+let CA1_2021_2022,
+  LA1_2021_2022,
+  CE1_2025_2026,
+  LE1_2025_2026,
+  CE2_2026_2027,
+  LA1A021
 export async function getFfvbbFixtures() {
   if (CA1_2021_2022 === undefined) {
     CA1_2021_2022 = await loadCA1Fixtures()
@@ -20,11 +25,21 @@ export async function getFfvbbFixtures() {
   if (LE1_2025_2026 === undefined) {
     LE1_2025_2026 = await loadLE1Fixtures()
   }
+  if (CE2_2026_2027 === undefined) {
+    CE2_2026_2027 = await loadIncompleteFixtures()
+  }
   if (LA1A021 === undefined) {
     LA1A021 = await loadLA1A021Fixtures()
   }
 
-  return { CA1_2021_2022, LA1_2021_2022, CE1_2025_2026, LE1_2025_2026, LA1A021 }
+  return {
+    CA1_2021_2022,
+    LA1_2021_2022,
+    CE1_2025_2026,
+    LE1_2025_2026,
+    CE2_2026_2027,
+    LA1A021,
+  }
 }
 
 async function loadCA1Fixtures() {
@@ -47,6 +62,15 @@ async function loadLE1Fixtures() {
   return (await readFile(LE1Path)).toString()
 }
 
+async function loadIncompleteFixtures() {
+  const IncompletePath = resolve(
+    __dirname,
+    'fixtures',
+    '2026-2027_PTPL44_CE2.csv',
+  )
+  return await readFile(IncompletePath)
+}
+
 async function loadLA1A021Fixtures() {
   const LA1A021Path = resolve(__dirname, 'fixtures', 'doc.pdf')
   return await readFile(LA1A021Path)
@@ -61,6 +85,7 @@ export default async function getMockedFfvbbClient() {
     LA1_2021_2022,
     CE1_2025_2026,
     LE1_2025_2026,
+    CE2_2026_2027,
     LA1A021,
   } = await getFfvbbFixtures()
 
@@ -125,6 +150,21 @@ export default async function getMockedFfvbbClient() {
       }),
     })
     .reply(200, LE1_2025_2026)
+
+  mockedFfvbbClient
+    .intercept({
+      method: 'POST',
+      path: '/ffvbapp/resu/vbspo_calendrier_export.php',
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      body: getRequestBody({
+        typ_edition: 'E',
+        type: 'RES',
+        cal_saison: '2026/2027',
+        cal_codent: 'PTPL44',
+        cal_codpoule: 'CE2',
+      }),
+    })
+    .reply(200, CE2_2026_2027)
 
   mockedFfvbbClient
     .intercept({
