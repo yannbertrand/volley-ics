@@ -17,7 +17,7 @@
   "devDependencies": {
     "netlify-cli": "23.15.1",
     "pdf2json": "4.1.0",
-    "prettier": "3.9.6",
+    "prettier": "3.9.7",
     "vitest": "5.0.1"
   }
 }
