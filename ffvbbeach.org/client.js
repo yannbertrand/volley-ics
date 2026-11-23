@@ -9,7 +9,10 @@ if (process.env.USE_NETWORK !== 'true') {
 export default async function getSaison(saison, ent, poule = null) {
   const client = await getFfvbbClient()
   const saisonMatches = await getSaisonMatches(client, saison, ent, poule)
-  return saisonMatches
+  return saisonMatches.map((match) => ({
+    ...match,
+    url: `https://www.ffvbbeach.org/ffvbapp/resu/vbspo_calendrier.php?saison=${saison}&codent=${ent}${poule != null ? `&poule=${poule}` : ''}`,
+  }))
 }
 
 async function getFfvbbClient() {

@@ -26,6 +26,7 @@ export default function (matches) {
       organiser: { name: 'volley-ics', email: 'comite44volley@protonmail.com' },
       status: 'CONFIRMED',
       timezone: 'Europe/Paris',
+      url: match.url,
     })
 
     // const attendee = event.createAttendee()
